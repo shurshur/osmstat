@@ -1,0 +1,257 @@
+# Copyright (C) YEAR ORGANIZATION
+#
+# Darafei Praliaskouski <komzpa@gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2009-09-27 20:56+EEST\n"
+"PO-Revision-Date: 2009-09-27 21:03+0300\n"
+"Last-Translator: Darafei Praliaskouski <komzpa@gmail.com>\n"
+"Language-Team: Belarusian <i18n@mova.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: ENCODING\n"
+"Generated-By: pygettext.py 1.5\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: initialParse.py:78
+msgid "<b>FixMe</b>"
+msgstr "<b>выпрвіць!</b>"
+
+#: initialParse.py:87
+msgid "OSM Stats"
+msgstr "Статыстыка OSM"
+
+#: initialParse.py:98
+msgid "Warnings"
+msgstr "Папярэджанні"
+
+#: initialParse.py:100
+msgid "Warning type"
+msgstr "Тып папярэджання"
+
+#: initialParse.py:100
+msgid "Way"
+msgstr "Шлях"
+
+#: initialParse.py:106
+msgid "Error loading %s\n"
+msgstr "Немагчыма адкрыць %s\n"
+
+#: initialParse.py:129
+msgid "Unnamed borders"
+msgstr "Безназоўныя межы"
+
+#: initialParse.py:131
+msgid "Area [km<sup>2</sup>]"
+msgstr "Плошча [км<sup>2</sup>]"
+
+#: initialParse.py:131
+msgid "Density [nodes/km<sup>2</sup>]"
+msgstr "Плотнасць [вузлоў/км<sup>2</sup>]"
+
+#: initialParse.py:131 initialParse.py:174 initialParse.py:343
+msgid "Nodes"
+msgstr "Вузлы"
+
+#: initialParse.py:131 initialParse.py:174 initialParse.py:377
+msgid "Link"
+msgstr "Спасылка"
+
+#: initialParse.py:140 initialParse.py:141
+msgid "Unnamed borders pages list"
+msgstr "Безназоўныя межы - спіс старонак"
+
+#: initialParse.py:143
+msgid "Page"
+msgstr "Старонка"
+
+#: initialParse.py:156
+msgid "Postal address relations"
+msgstr "Паштовыя адрасы"
+
+#: initialParse.py:160
+msgid "double-pass on address relation"
+msgstr "падвоены праход па адраснай сувязі"
+
+#: initialParse.py:174
+msgid "Area"
+msgstr "Плошча"
+
+#: initialParse.py:174
+msgid "Density"
+msgstr "Плотнасць"
+
+#: initialParse.py:174 initialParse.py:377
+msgid "Name"
+msgstr "Назва"
+
+#: initialParse.py:174 initialParse.py:377
+msgid "Type"
+msgstr "Тып"
+
+#: initialParse.py:192
+msgid "??? unknown"
+msgstr "??? невядомa"
+
+#: initialParse.py:204
+msgid "<h3>Relations</h3>"
+msgstr "<h3>Сувязі</h3>"
+
+#: initialParse.py:262
+msgid "other"
+msgstr "іншыя"
+
+#: initialParse.py:266
+msgid "Tags"
+msgstr "Цэтлікі"
+
+#: initialParse.py:313
+msgid "Ways: "
+msgstr "Шляхі: "
+
+#: initialParse.py:318
+msgid "Nodes: "
+msgstr "Вузлы: "
+
+#: initialParse.py:323
+msgid "Relations: "
+msgstr "Сувязі: "
+
+#: initialParse.py:341
+msgid "Users"
+msgstr "Карыстальнікі"
+
+#: initialParse.py:343
+msgid "%"
+msgstr "%"
+
+#: initialParse.py:343
+msgid "First known edit"
+msgstr "Першая змена"
+
+#: initialParse.py:343
+msgid "Latest known edit"
+msgstr "Апошняя змена"
+
+#: initialParse.py:343
+msgid "Links"
+msgstr "Спасылкі"
+
+#: initialParse.py:343
+msgid "Relations"
+msgstr "Сувязі"
+
+#: initialParse.py:343
+msgid "Speed [obj/day]"
+msgstr "Хуткасць [аб'екты/дзень]"
+
+#: initialParse.py:343
+msgid "User"
+msgstr "Карыстальнік"
+
+#: initialParse.py:343
+msgid "Ways"
+msgstr "Шляхі"
+
+#: initialParse.py:364
+msgid "CalcedHome"
+msgstr "Вылічанае знаходжанне"
+
+#: initialParse.py:370
+msgid "name:be,name:en,name:ru"
+msgstr "name:be,name:be-latn,name:en,name:ru"
+
+#: initialParse.py:375
+msgid "Localities"
+msgstr "Населеныя пункты"
+
+#: initialParse.py:387
+msgid "goto"
+msgstr "ісці"
+
+#: initialParse.py:394
+msgid "Welcome to :"
+msgstr "Змест :"
+
+#: initialParse.py:395
+msgid "<h3>OSM Statistics for %s</h3>"
+msgstr "<h3>Статыстыка OSM - %s</h3>"
+
+#: initialParse.py:397
+msgid "<li><a href=users.html>users</a></li>"
+msgstr "<li><a href=users.html>карыстальнікі</a></li>"
+
+#: initialParse.py:398
+msgid "<li><a href=points.html>points</a></li>"
+msgstr "<li><a href=points.html>населеныя пункты</a></li>"
+
+#: initialParse.py:399
+msgid "<li>address relations: %s</li>"
+msgstr "<li>адрасныя сувязі: %s</li>"
+
+#: initialParse.py:400
+msgid "<li><a href=warnings.html>warnings</a></li>"
+msgstr "<li><a href=warnings.html>папярэджанні</a></li>"
+
+#: initialParse.py:401
+msgid "<li><a href=borders.html>borders</a></li>"
+msgstr "<li><a href=borders.html>межы</a></li>"
+
+#: initialParse.py:402
+msgid "<li><a href=unnamed.html>unnamed borders</a></li>"
+msgstr "<li><a href=unnamed.html>межы без назваў</a></li>"
+
+#: initialParse.py:403
+msgid "<li><a href=route.html>routing subgraphs</a></li>"
+msgstr "<li><a href=route.html>разрывы дарожнай сеткі</a></li>"
+
+#: initialParse.py:404
+msgid "<li>tags: "
+msgstr "<li>цэтлікі: "
+
+#: initialParse.py:429
+msgid "<p>Average mapping speed: <b>%f</b> obj/day</p>"
+msgstr "<p>Сярэдняя хуткасць адмалёўкі: <b>%f</b> аб'ектаў/дзень</p>"
+
+#: initialParse.py:430
+msgid "<p>Tiles fill(avg/max): <b>%f</b>/<b>%s</b></p>"
+msgstr "<p>Запаўненне пліткі (сярэдняе/найбольшае): <b>%f</b>/<b>%s</b></p>"
+
+#: initialParse.py:431
+msgid "<p>Number of Nodes: <b>%s</b></p>"
+msgstr "<p>Колькасць вузлоў: <b>%s</b></p>"
+
+#: initialParse.py:432
+msgid "<p>Number of Ways: <b>%s</b></p>"
+msgstr "<p>Колькасць шляхоў: <b>%s</b></p>"
+
+#: initialParse.py:433
+msgid "<p>Number of Relations: <b>%s</b></p>"
+msgstr "<p>Колькасць сувязей: <b>%s</b></p>"
+
+#: initialParse.py:434
+msgid "<p>Number of Borders/Places: <b>%s</b>/<b>%s</b></p>"
+msgstr "<p>Колькасць межаў / населеных пунктаў: <b>%s</b>/<b>%s</b></p>"
+
+#: initialParse.py:435
+msgid "<p>First known update: <b>%s</b></p>"
+msgstr "<p>Першая вядомая змена: <b>%s</b></p>"
+
+#: initialParse.py:436
+msgid "<p>Last update: <b>%s</b></p>"
+msgstr "<p>Апошняя вядомая змена: <b>%s</b></p>"
+
+#: initialParse.py:447
+msgid "Routes"
+msgstr "Маршруты"
+
+#: initialParse.py:449
+msgid "First way in group"
+msgstr "Першы шлях у групе"
+
+#: initialParse.py:449
+msgid "Number of ways"
+msgstr "Колькасць шляхоў"
+

@@ -1,0 +1,263 @@
+# Albanian translation of the OSM Stats.
+# This file is distributed under the same license as the PACKAGE package.
+# Besnik Bleta <besnik@programeshqip.org>, 2007-2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2009-09-27 20:56+EEST\n"
+"PO-Revision-Date: 2009-09-28 13:47+0200\n"
+"Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
+"Language-Team: Shqip <besnik@programeshqip.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: initialParse.py:78
+msgid "<b>FixMe</b>"
+msgstr "<b>Ndreqmëni</b>"
+
+#: initialParse.py:87
+msgid "OSM Stats"
+msgstr "Statistika OSM"
+
+#: initialParse.py:98
+msgid "Warnings"
+msgstr "Sinjalizime"
+
+#: initialParse.py:100
+msgid "Warning type"
+msgstr "Lloj sinjalizimi"
+
+#: initialParse.py:100
+msgid "Way"
+msgstr "Udhë"
+
+#: initialParse.py:106
+msgid "Error loading %s\n"
+msgstr "Gabim në ngarkimin e %s\n"
+
+#: initialParse.py:129
+msgid "Unnamed borders"
+msgstr "Kufij pa emra"
+
+#: initialParse.py:131
+msgid "Area [km<sup>2</sup>]"
+msgstr "Area [km<sup>2</sup>]"
+
+#: initialParse.py:131
+msgid "Density [nodes/km<sup>2</sup>]"
+msgstr "Dendësi [nyje/km<sup>2</sup>]"
+
+#: initialParse.py:131
+#: initialParse.py:174
+#: initialParse.py:343
+msgid "Nodes"
+msgstr "Nyje"
+
+#: initialParse.py:131
+#: initialParse.py:174
+#: initialParse.py:377
+msgid "Link"
+msgstr "Lidhje"
+
+#: initialParse.py:140
+#: initialParse.py:141
+msgid "Unnamed borders pages list"
+msgstr "Listë faqesh për kufinj të paemërt"
+
+#: initialParse.py:143
+msgid "Page"
+msgstr "Faqe"
+
+#: initialParse.py:156
+msgid "Postal address relations"
+msgstr "Marrëdhënie adresash postare"
+
+#: initialParse.py:160
+msgid "double-pass on address relation"
+msgstr ""
+
+#: initialParse.py:174
+msgid "Area"
+msgstr "Zonë"
+
+#: initialParse.py:174
+msgid "Density"
+msgstr "Dendësi:"
+
+#: initialParse.py:174
+#: initialParse.py:377
+msgid "Name"
+msgstr "Emër"
+
+#: initialParse.py:174
+#: initialParse.py:377
+msgid "Type"
+msgstr "Lloj"
+
+#: initialParse.py:192
+msgid "??? unknown"
+msgstr "??? i/e panjohur"
+
+#: initialParse.py:204
+msgid "<h3>Relations</h3>"
+msgstr "<h3>Marrëdhënie</h3>"
+
+#: initialParse.py:262
+msgid "other"
+msgstr "tjetër"
+
+#: initialParse.py:266
+msgid "Tags"
+msgstr "Etiketa"
+
+#: initialParse.py:313
+msgid "Ways: "
+msgstr "Udhë:"
+
+#: initialParse.py:318
+msgid "Nodes: "
+msgstr "Nyje:"
+
+#: initialParse.py:323
+msgid "Relations: "
+msgstr "Marrëdhënie:"
+
+#: initialParse.py:341
+msgid "Users"
+msgstr "Përdoruesa"
+
+#: initialParse.py:343
+msgid "%"
+msgstr "%"
+
+#: initialParse.py:343
+msgid "First known edit"
+msgstr "Përpunimi i parë i njohur"
+
+#: initialParse.py:343
+msgid "Latest known edit"
+msgstr "Përpunimi i fundit i njohur"
+
+#: initialParse.py:343
+msgid "Links"
+msgstr "Lidhje"
+
+#: initialParse.py:343
+msgid "Relations"
+msgstr "Marrëdhënie"
+
+#: initialParse.py:343
+msgid "Speed [obj/day]"
+msgstr "Shpejtësi [obj/ditë]"
+
+#: initialParse.py:343
+msgid "User"
+msgstr "Përdorues"
+
+#: initialParse.py:343
+msgid "Ways"
+msgstr "Udhë"
+
+#: initialParse.py:364
+msgid "CalcedHome"
+msgstr ""
+
+#: initialParse.py:370
+msgid "name:be,name:en,name:ru"
+msgstr "name:be,name:en,name:ru,name:sq"
+
+#: initialParse.py:375
+msgid "Localities"
+msgstr "Lokalitete"
+
+#: initialParse.py:387
+msgid "goto"
+msgstr "goto"
+
+#: initialParse.py:394
+msgid "Welcome to :"
+msgstr "Mirë se vini te"
+
+#: initialParse.py:395
+msgid "<h3>OSM Statistics for %s</h3>"
+msgstr "<h3>Statistika OSM për %s</h3>"
+
+#: initialParse.py:397
+msgid "<li><a href=users.html>users</a></li>"
+msgstr "<li><a href=users.html>përdoruesa</a></li>"
+
+#: initialParse.py:398
+msgid "<li><a href=points.html>points</a></li>"
+msgstr "<li><a href=points.html>pikë</a></li>"
+
+#: initialParse.py:399
+msgid "<li>address relations: %s</li>"
+msgstr "<li>marrëdhënie adresash: %s</li>"
+
+#: initialParse.py:400
+msgid "<li><a href=warnings.html>warnings</a></li>"
+msgstr "<li><a href=warnings.html>sinjalizime</a></li>"
+
+#: initialParse.py:401
+msgid "<li><a href=borders.html>borders</a></li>"
+msgstr "<li><a href=borders.html>kufij</a></li>"
+
+#: initialParse.py:402
+msgid "<li><a href=unnamed.html>unnamed borders</a></li>"
+msgstr "<li><a href=unnamed.html>kufij pa emër</a></li>"
+
+#: initialParse.py:403
+msgid "<li><a href=route.html>routing subgraphs</a></li>"
+msgstr "<li><a href=route.html>nëngrafikë për rrjetin rrugor</a></li>"
+
+#: initialParse.py:404
+msgid "<li>tags: "
+msgstr "<li>etiketa: "
+
+#: initialParse.py:429
+msgid "<p>Average mapping speed: <b>%f</b> obj/day</p>"
+msgstr "<p>Shpejtësi mesatare hedhjeje në hartë: <b>%f</b> obj/ditë</p>"
+
+#: initialParse.py:430
+msgid "<p>Tiles fill(avg/max): <b>%f</b>/<b>%s</b></p>"
+msgstr ""
+
+#: initialParse.py:431
+msgid "<p>Number of Nodes: <b>%s</b></p>"
+msgstr "<p>Numër Nyjesh: <b>%s</b></p>"
+
+#: initialParse.py:432
+msgid "<p>Number of Ways: <b>%s</b></p>"
+msgstr "<p>Numër Udhësh: <b>%s</b></p>"
+
+#: initialParse.py:433
+msgid "<p>Number of Relations: <b>%s</b></p>"
+msgstr "<p>Numër Marrëdhëniesh: <b>%s</b></p>"
+
+#: initialParse.py:434
+msgid "<p>Number of Borders/Places: <b>%s</b>/<b>%s</b></p>"
+msgstr "<p>Numër Kufijsh/Vendesh: <b>%s</b>/<b>%s</b></p>"
+
+#: initialParse.py:435
+msgid "<p>First known update: <b>%s</b></p>"
+msgstr "<p>Përditësimi i parë i njohur: <b>%s</b></p>"
+
+#: initialParse.py:436
+msgid "<p>Last update: <b>%s</b></p>"
+msgstr "<p>Përditësimi i fundit: <b>%s</b></p>"
+
+#: initialParse.py:447
+msgid "Routes"
+msgstr "Rrugë"
+
+#: initialParse.py:449
+msgid "First way in group"
+msgstr "Udha e parë në grup"
+
+#: initialParse.py:449
+msgid "Number of ways"
+msgstr "Numër udhësh"
+

@@ -1,0 +1,258 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2009-09-27 20:56+EEST\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: ENCODING\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: initialParse.py:78
+msgid "<b>FixMe</b>"
+msgstr ""
+
+#: initialParse.py:87
+msgid "OSM Stats"
+msgstr ""
+
+#: initialParse.py:98
+msgid "Warnings"
+msgstr ""
+
+#: initialParse.py:100
+msgid "Warning type"
+msgstr ""
+
+#: initialParse.py:100
+msgid "Way"
+msgstr ""
+
+#: initialParse.py:106
+msgid ""
+"Error loading %s\n"
+msgstr ""
+
+#: initialParse.py:129
+msgid "Unnamed borders"
+msgstr ""
+
+#: initialParse.py:131
+msgid "Area [km<sup>2</sup>]"
+msgstr ""
+
+#: initialParse.py:131
+msgid "Density [nodes/km<sup>2</sup>]"
+msgstr ""
+
+#: initialParse.py:131 initialParse.py:174 initialParse.py:343
+msgid "Nodes"
+msgstr ""
+
+#: initialParse.py:131 initialParse.py:174 initialParse.py:377
+msgid "Link"
+msgstr ""
+
+#: initialParse.py:140 initialParse.py:141
+msgid "Unnamed borders pages list"
+msgstr ""
+
+#: initialParse.py:143
+msgid "Page"
+msgstr ""
+
+#: initialParse.py:156
+msgid "Postal address relations"
+msgstr ""
+
+#: initialParse.py:160
+msgid "double-pass on address relation"
+msgstr ""
+
+#: initialParse.py:174
+msgid "Area"
+msgstr ""
+
+#: initialParse.py:174
+msgid "Density"
+msgstr ""
+
+#: initialParse.py:174 initialParse.py:377
+msgid "Name"
+msgstr ""
+
+#: initialParse.py:174 initialParse.py:377
+msgid "Type"
+msgstr ""
+
+#: initialParse.py:192
+msgid "??? unknown"
+msgstr ""
+
+#: initialParse.py:204
+msgid "<h3>Relations</h3>"
+msgstr ""
+
+#: initialParse.py:262
+msgid "other"
+msgstr ""
+
+#: initialParse.py:266
+msgid "Tags"
+msgstr ""
+
+#: initialParse.py:313
+msgid "Ways: "
+msgstr ""
+
+#: initialParse.py:318
+msgid "Nodes: "
+msgstr ""
+
+#: initialParse.py:323
+msgid "Relations: "
+msgstr ""
+
+#: initialParse.py:341
+msgid "Users"
+msgstr ""
+
+#: initialParse.py:343
+msgid "%"
+msgstr ""
+
+#: initialParse.py:343
+msgid "First known edit"
+msgstr ""
+
+#: initialParse.py:343
+msgid "Latest known edit"
+msgstr ""
+
+#: initialParse.py:343
+msgid "Links"
+msgstr ""
+
+#: initialParse.py:343
+msgid "Relations"
+msgstr ""
+
+#: initialParse.py:343
+msgid "Speed [obj/day]"
+msgstr ""
+
+#: initialParse.py:343
+msgid "User"
+msgstr ""
+
+#: initialParse.py:343
+msgid "Ways"
+msgstr ""
+
+#: initialParse.py:364
+msgid "CalcedHome"
+msgstr ""
+
+#: initialParse.py:370
+msgid "name:be,name:en,name:ru"
+msgstr ""
+
+#: initialParse.py:375
+msgid "Localities"
+msgstr ""
+
+#: initialParse.py:387
+msgid "goto"
+msgstr ""
+
+#: initialParse.py:394
+msgid "Welcome to :"
+msgstr ""
+
+#: initialParse.py:395
+msgid "<h3>OSM Statistics for %s</h3>"
+msgstr ""
+
+#: initialParse.py:397
+msgid "<li><a href=users.html>users</a></li>"
+msgstr ""
+
+#: initialParse.py:398
+msgid "<li><a href=points.html>points</a></li>"
+msgstr ""
+
+#: initialParse.py:399
+msgid "<li>address relations: %s</li>"
+msgstr ""
+
+#: initialParse.py:400
+msgid "<li><a href=warnings.html>warnings</a></li>"
+msgstr ""
+
+#: initialParse.py:401
+msgid "<li><a href=borders.html>borders</a></li>"
+msgstr ""
+
+#: initialParse.py:402
+msgid "<li><a href=unnamed.html>unnamed borders</a></li>"
+msgstr ""
+
+#: initialParse.py:403
+msgid "<li><a href=route.html>routing subgraphs</a></li>"
+msgstr ""
+
+#: initialParse.py:404
+msgid "<li>tags: "
+msgstr ""
+
+#: initialParse.py:429
+msgid "<p>Average mapping speed: <b>%f</b> obj/day</p>"
+msgstr ""
+
+#: initialParse.py:430
+msgid "<p>Tiles fill(avg/max): <b>%f</b>/<b>%s</b></p>"
+msgstr ""
+
+#: initialParse.py:431
+msgid "<p>Number of Nodes: <b>%s</b></p>"
+msgstr ""
+
+#: initialParse.py:432
+msgid "<p>Number of Ways: <b>%s</b></p>"
+msgstr ""
+
+#: initialParse.py:433
+msgid "<p>Number of Relations: <b>%s</b></p>"
+msgstr ""
+
+#: initialParse.py:434
+msgid "<p>Number of Borders/Places: <b>%s</b>/<b>%s</b></p>"
+msgstr ""
+
+#: initialParse.py:435
+msgid "<p>First known update: <b>%s</b></p>"
+msgstr ""
+
+#: initialParse.py:436
+msgid "<p>Last update: <b>%s</b></p>"
+msgstr ""
+
+#: initialParse.py:447
+msgid "Routes"
+msgstr ""
+
+#: initialParse.py:449
+msgid "First way in group"
+msgstr ""
+
+#: initialParse.py:449
+msgid "Number of ways"
+msgstr ""
+

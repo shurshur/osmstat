@@ -1,0 +1,257 @@
+#Traduction française (French translation)
+# Copyright (C) 2009 ORGANIZATION
+# Chedi Ghedira <chdoula@gmail.com>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2009-09-27 20:56+EEST\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Chedi Ghedira <chdoula@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: ENCODING\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: initialParse.py:78
+msgid "<b>FixMe</b>"
+msgstr "RepareMoi"
+
+#: initialParse.py:87
+msgid "OSM Stats"
+msgstr "Statistiques OSM"
+
+#: initialParse.py:98
+msgid "Warnings"
+msgstr "Alertes"
+
+#: initialParse.py:100
+msgid "Warning type"
+msgstr "Type de l'alerte"
+
+#: initialParse.py:100
+msgid "Way"
+msgstr "Chemin"
+
+#: initialParse.py:106
+msgid ""
+"Error loading %s\n"
+msgstr ""
+
+#: initialParse.py:129
+msgid "Unnamed borders"
+msgstr "Frontières sans nom"
+
+#: initialParse.py:131
+msgid "Area [km<sup>2</sup>]"
+msgstr "Superficie [km<sup>2</sup>]"
+
+#: initialParse.py:131
+msgid "Density [nodes/km<sup>2</sup>]"
+msgstr "Densité [noeuds/km<sup>2</sup>]"
+
+#: initialParse.py:131 initialParse.py:174 initialParse.py:343
+msgid "Nodes"
+msgstr "Noeuds"
+
+#: initialParse.py:131 initialParse.py:174 initialParse.py:377
+msgid "Link"
+msgstr "Lien"
+
+#: initialParse.py:140 initialParse.py:141
+msgid "Unnamed borders pages list"
+msgstr "Liste des pages de frontières sans nom"
+
+#: initialParse.py:143
+msgid "Page"
+msgstr "Page"
+
+#: initialParse.py:156
+msgid "Postal address relations"
+msgstr "Relation d'adresses postales"
+
+#: initialParse.py:160
+msgid "double-pass on address relation"
+msgstr "double-passe dans une relation d'adresses"
+
+#: initialParse.py:174
+msgid "Area"
+msgstr "Zone"
+
+#: initialParse.py:174
+msgid "Density"
+msgstr "Densité"
+
+#: initialParse.py:174 initialParse.py:377
+msgid "Name"
+msgstr "Nom"
+
+#: initialParse.py:174 initialParse.py:377
+msgid "Type"
+msgstr "Type"
+
+#: initialParse.py:192
+msgid "??? unknown"
+msgstr "??? inconnu"
+
+#: initialParse.py:204
+msgid "<h3>Relations</h3>"
+msgstr "<h3>Relations</h3>"
+
+#: initialParse.py:262
+msgid "other"
+msgstr "Autre"
+
+#: initialParse.py:266
+msgid "Tags"
+msgstr "Balises"
+
+#: initialParse.py:313
+msgid "Ways: "
+msgstr "Chemins: "
+
+#: initialParse.py:318
+msgid "Nodes: "
+msgstr "Noeuds: "
+
+#: initialParse.py:323
+msgid "Relations: "
+msgstr "Relations: "
+
+#: initialParse.py:341
+msgid "Users"
+msgstr "Utilisateurs"
+
+#: initialParse.py:343
+msgid "%"
+msgstr "%"
+
+#: initialParse.py:343
+msgid "First known edit"
+msgstr "Première modification connue"
+
+#: initialParse.py:343
+msgid "Latest known edit"
+msgstr "Dernière modification connue"
+
+#: initialParse.py:343
+msgid "Links"
+msgstr "Liens"
+
+#: initialParse.py:343
+msgid "Relations"
+msgstr "Relations"
+
+#: initialParse.py:343
+msgid "Speed [obj/day]"
+msgstr "Vitesse [objet/jour]"
+
+#: initialParse.py:343
+msgid "User"
+msgstr "Utilisateur"
+
+#: initialParse.py:343
+msgid "Ways"
+msgstr "Chemins"
+
+#: initialParse.py:364
+msgid "CalcedHome"
+msgstr "Emplacement"
+
+#: initialParse.py:370
+msgid "name:be,name:en,name:ru"
+msgstr "name:ar,name:fr,name:en"
+
+#: initialParse.py:375
+msgid "Localities"
+msgstr "Localités"
+
+#: initialParse.py:387
+msgid "goto"
+msgstr "Aller à"
+
+#: initialParse.py:394
+msgid "Welcome to :"
+msgstr "Bienvenue à :"
+
+#: initialParse.py:395
+msgid "<h3>OSM Statistics for %s</h3>"
+msgstr "<h3>Statistiques OSM pour %s</h3>"
+
+#: initialParse.py:397
+msgid "<li><a href=users.html>users</a></li>"
+msgstr "<li><a href=users.html>Utilisateurs</a></li>"
+
+#: initialParse.py:398
+msgid "<li><a href=points.html>points</a></li>"
+msgstr "<li><a href=points.html>Noeuds</a></li>"
+
+#: initialParse.py:399
+msgid "<li>address relations: %s</li>"
+msgstr "<li>Relations de type adresse: %s</li>"
+
+#: initialParse.py:400
+msgid "<li><a href=warnings.html>warnings</a></li>"
+msgstr "<li><a href=warnings.html>Alertes</a></li>"
+
+#: initialParse.py:401
+msgid "<li><a href=borders.html>borders</a></li>"
+msgstr "<li><a href=borders.html>Frontières</a></li>"
+
+#: initialParse.py:402
+msgid "<li><a href=unnamed.html>unnamed borders</a></li>"
+msgstr "<li><a href=unnamed.html>Frontières sans nom</a></li>"
+
+#: initialParse.py:403
+msgid "<li><a href=route.html>routing subgraphs</a></li>"
+msgstr "<li><a href=route.html>subgraphs de routage</a></li>"
+
+#: initialParse.py:404
+msgid "<li>tags: "
+msgstr "<li>Balises: "
+
+#: initialParse.py:429
+msgid "<p>Average mapping speed: <b>%f</b> obj/day</p>"
+msgstr "<p>Vitesse moyenne de cartographie: <b>%f</b> objet/jour</p"
+
+#: initialParse.py:430
+msgid "<p>Tiles fill(avg/max): <b>%f</b>/<b>%s</b></p>"
+msgstr "<p>Couverture des pavés (moyenne/maximum): <b>%f</b>/<b>%s</b></p>"
+
+#: initialParse.py:431
+msgid "<p>Number of Nodes: <b>%s</b></p>"
+msgstr "<p>Nombre de noeuds: <b>%s</b></p>"
+
+#: initialParse.py:432
+msgid "<p>Number of Ways: <b>%s</b></p>"
+msgstr "<p>Nombre de chemins: <b>%s</b></p>"
+
+#: initialParse.py:433
+msgid "<p>Number of Relations: <b>%s</b></p>"
+msgstr "<p>Nombre de relations: <b>%s</b></p>"
+
+#: initialParse.py:434
+msgid "<p>Number of Borders/Places: <b>%s</b>/<b>%s</b></p>"
+msgstr "<p>Nombre de frontières/Endroits: <b>%s</b>/<b>%s</b></p>"
+
+#: initialParse.py:435
+msgid "<p>First known update: <b>%s</b></p>"
+msgstr "<p>Première mise à jour connue: <b>%s</b></p>"
+
+#: initialParse.py:436
+msgid "<p>Last update: <b>%s</b></p>"
+msgstr "<p>Dernière mise à jour: <b>%s</b></p>"
+
+#: initialParse.py:447
+msgid "Routes"
+msgstr "Routes"
+
+#: initialParse.py:449
+msgid "First way in group"
+msgstr "Premier chemin dans le groupe"
+
+#: initialParse.py:449
+msgid "Number of ways"
+msgstr "Nombre de chemins"
