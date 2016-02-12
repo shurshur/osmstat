@@ -11,13 +11,14 @@ from xml.sax import make_parser, handler
 
 # Available modules:
 #  users
+#  users-csv
 #  calchome
 #  place
 #  borders
 #  warning
 #  tags
 #  routing
-modules = ['users','calchome','places','warnings','borders','routing','tags']
+modules = ['users','users-csv','calchome','places','warnings','borders','routing','tags']
 
 memdebug = False
 
@@ -413,6 +414,8 @@ if(op < 1) {op += 0.1;	tipobj.style.opacity = op;tipobj.style.filter = 'alpha(op
       usersFile.write(htmlheader % (" ",_("Users")))
       usersFile.write(htmltablestart)
       usersFile.write(htmltablerow((_("User"), _("Nodes"), _("Ways"), _("Relations"), _("%"), _("Speed [obj/day]"), _("First known edit"), _("Latest known edit"), _("Links"))))
+      if ifmod('users-csv'):
+        usersFileCsv = open('users.csv','w')
       for user in self.User.values():
 	  if user["LastDate"] > self.LastChange:
 	    self.LastChange = user["LastDate"]
@@ -425,6 +428,8 @@ Nodes: %s Ways: %s Relations: %s Since: %s
 <styleUrl>#rss</styleUrl>
 <Point><coordinates>%s, %s</coordinates></Point>
 </Placemark>"""
+      if ifmod('users-csv'):
+        usersFileCsv.write("uid;name;nodes;ways;relations\r\n")
     ## end ifmod('users')
 	
     for user in userlist:
@@ -460,6 +465,9 @@ Nodes: %s Ways: %s Relations: %s Since: %s
           CHLink 
           , \
         ))))
+        if ifmod('users-csv'):
+          usersFileCsv.write("\"%s\";\"%s\";\"%d\";\"%d\";\"%d\"\r\n" % \
+            (user, self.User[user]["Name"], self.User[user]["Nodes"], self.User[user]["Ways"], self.User[user]["Relations"]))
     if ifmod('users'):
       kml.write("""</Folder>
 </Document>
@@ -467,6 +475,8 @@ Nodes: %s Ways: %s Relations: %s Since: %s
       kml.close()
       usersFile.write( "</table></body></html>")
       usersFile.close()
+      if ifmod('users-csv'):
+        usersFileCsv.close()
     ## end ifmod('users')
 
     if ifmod('places'):
@@ -872,7 +882,7 @@ Nodes: %s Ways: %s Relations: %s Since: %s
 	    self.NodesToWays[i] = []
 	  self.NodesToWays[i].append(id)
 	if 'highway' in self.tags:
-	  if self.tags['highway'] not in ('footway','path','pedestrain'):
+	  if self.tags['highway'] not in ('steps','footway','path','pedestrain'):
 		  self.RoutableWays.add(id)
 	if 'route' in self.tags:
 	  if self.tags['route'] == 'ferry':
@@ -1009,3 +1019,6 @@ Nodes: %s Ways: %s Relations: %s Since: %s
 if(__name__ == "__main__"):
   a = osmParser(sys.stdin)
 
+cn = open("country.ini", "w")
+cn.write(CountryName)
+cn.close()
