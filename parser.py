@@ -1,4 +1,4 @@
-#!/usr/local/bin/python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import sys
 import os
@@ -44,7 +44,10 @@ import datetime
 import time
 import tagChecker
 from osm_micro_tools import *
-from xml.utils.iso8601 import parse
+try:
+  from xml.utils.iso8601 import parse
+except ImportError:
+  from iso8601tmp import parse
 
 try:
         import psyco
@@ -751,10 +754,13 @@ Nodes: %s Ways: %s Relations: %s Since: %s
       self.isInteresting = False
       self.waynodes = []
       self.useTiles=0
-      uid=attrs.get('uid',attrs.get("user",""))
-      self.currentUser = uid
       date = attrs.get('timestamp')
-      self.UserTasks(uid, attrs.get('user',""), date)
+      if ifmod("users"):
+        uid=attrs.get('uid',attrs.get("user",""))
+        if uid == "":
+          raise BaseException("User uid undefined (required for 'users' module)")
+        self.currentUser = uid
+        self.UserTasks(uid, attrs.get('user',""), date)
       day = date[0:10]
       hour = date[0:15]
       changeset = attrs.get("changeset", hour)
