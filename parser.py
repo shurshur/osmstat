@@ -44,10 +44,8 @@ import datetime
 import time
 import tagChecker
 from osm_micro_tools import *
-try:
-  from xml.utils.iso8601 import parse
-except ImportError:
-  from iso8601tmp import parse
+
+from iso8601 import parse
 
 try:
         import psyco
