@@ -1021,6 +1021,9 @@ Nodes: %s Ways: %s Relations: %s Since: %s
         len(self.User), len(self.Nodes), len(self.Ways), len(self.NodesToWays), len(self.Tiles), len(self.Borders), len(self.Places), len(self.BPlaces), len(self.BorderList), len(self.TagsList)))
 
 if(__name__ == "__main__"):
+  usage = "usage: parser.py <uilang> <country> < country-dump.osm"
+  if sys.stdin.isatty():
+    sys.exit(usage)
   a = osmParser(sys.stdin)
 
 cn = open("country.ini", "w")

@@ -9,7 +9,7 @@ E.g.:
 
 	bzcat RU.osm.bz2|./parser.py ru "Россия" users,tags
 	bzcat RU-KLU.osm.bz2|./parser.py ru "Калужская область"
-	wget http://download.geofabrik.de/openstreetmap/south-america/argentina.osm.bz2 -O - -o /dev/null|bunzip2|./parser.py en Argentina
+	wget http://download.geofabrik.de/europe/ukraine-latest.osm.bz2 -O - -o /dev/null|bunzip2|./parser.py en Ukraine
 
 Script parses OSM XML from stdin and creates html files with given region statistics
 
