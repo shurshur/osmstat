@@ -1,0 +1,35 @@
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 2.7
+      uses: actions/setup-python@v2
+      with:
+        python-version: 2.7
+    - name: Install dependencies
+      run: |
+        sudo apt-get install osmctools
+    - name: Download dump
+      run: |
+        wget http://download.openstreetmap.fr/extracts/europe/ukraine.osm.pbf
+        osmconvert ukraine.osm.pbf > ukraine.osm
+    - name: Compile
+      run: |
+        python ./parser.py en Ukraine < ukraine.osm
+        tree
+        mkdir public
+        cp *.html public/
+
+    - name: Upload to GitHub Pages
+      uses: crazy-max/ghaction-github-pages@v2.5.0
+      with:
+        keep_history: true
+        build_dir: public
+        verbose: true
