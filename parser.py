@@ -756,7 +756,9 @@ Nodes: %s Ways: %s Relations: %s Since: %s
       if ifmod("users"):
         uid=attrs.get('uid',attrs.get("user",""))
         if uid == "":
-          raise BaseException("Missing uid (required for 'users' module) for %s id %s" % (name, self.currentId))
+          msg = "Missing uid (required for 'users' module) for %s id %s" % (name, self.currentId)
+          print(msg)
+          #raise BaseException(msg)
         self.currentUser = uid
         self.UserTasks(uid, attrs.get('user',""), date)
       day = date[0:10]
