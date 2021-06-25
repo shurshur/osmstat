@@ -15,10 +15,10 @@ jobs:
         python-version: 2.7
     - name: Install dependencies
       run: |
-        sudo apt-get install osmctools
+        sudo apt-get install osmctools tree
     - name: Download dump
       run: |
-        wget http://download.openstreetmap.fr/extracts/europe/ukraine.osm.pbf
+        wget -q http://download.openstreetmap.fr/extracts/europe/ukraine.osm.pbf
         osmconvert ukraine.osm.pbf > ukraine.osm
     - name: Compile
       run: |
