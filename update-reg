@@ -1,0 +1,208 @@
+#!/bin/bash
+
+dir=/home/osmstat/www
+tmpdir=/home/osmstat/tmp
+newdir=/home/osmstat/osmstat
+gislab=http://be.gis-lab.info/data/osm_dump/dump/latest
+locald=http://osm.sbin.ru/osm_dump
+directd=/data/dumps/latest
+dt=`date +%Y%m%d`
+#dt=20190411
+
+runme() {
+  mkdir -p $dir/$1
+  cd $dir/$1
+  mkdir -p $dt
+  cd $dt
+  bzcat "$2"|$newdir/parser.py ru "$3"
+  cd ..
+  rm -f latest
+  ln -s $dt latest
+}
+
+runmepipe() {
+  lang=$3
+  if [ -z "$lang" ]
+  then
+    lang=ru
+  fi
+  mkdir -p $dir/$1
+  cd $dir/$1
+  mkdir -p $dt
+  cd $dt
+  $newdir/parser.py $lang "$2" $4
+  cd ..
+  rm -f latest
+  ln -s $dt latest
+}
+
+runmepipe2() {
+  iso=$1
+  shift
+  #wget $gislab/$iso.osm.bz2 -O - -o /dev/null|bunzip2|runmepipe "$@"
+  wget $locald/$iso.osm.pbf -O - -o /dev/null|osmconvert --out-osm -|runmepipe "$@"
+  #cat $directd/$iso.osm.pbf|osmconvert --out-osm -|runmepipe "$@"
+}
+
+runallother() {
+  runmepipe2 KZ kz "Казахстан"
+  runmepipe2 KG kg "Кыргызстан" 
+  runmepipe2 TJ tj "Таджикистан" 
+  runmepipe2 TM tm "Туркменистан" 
+  runmepipe2 UZ uz "Узбекистан"
+  runmepipe2 LV lv "Латвия" 
+  runmepipe2 LT lt "Литва" ru users,users-csv,warnings,borders,routing,tags
+  runmepipe2 EE ee "Эстония" 
+  runmepipe2 AZ az "Азербайджан" 
+  runmepipe2 AM am "Армения" 
+  runmepipe2 GE ge "Грузия" 
+  runmepipe2 MD md "Молдова" 
+}
+
+runallby() {
+  runmepipe2 BY-HO  by/gomel "Гомельская область" 
+  runmepipe2 BY-VI  by/vitebsk "Витебская область" 
+  runmepipe2 BY-BR  by/brest "Брестская область"
+  runmepipe2 BY-HR  by/grodno "Гродненская область"
+  runmepipe2 BY-MI  by/minsk "Минская область"
+  runmepipe2 BY-MO  by/mogilyov "Могилевская область"
+}
+
+runallru() {
+  runmepipe2 RU-ALT ru/altayskiy "Алтайский край"
+  runmepipe2 RU-AMU ru/amur "Амурская область"
+  runmepipe2 RU-ARK ru/arkhan "Архангельская область"
+  runmepipe2 RU-AST ru/astrakhan "Астраханская область"
+  runmepipe2 RU-BEL ru/belgorod "Белгородская область"
+  runmepipe2 RU-BRY ru/bryansk "Брянская область"
+  runmepipe2 RU-VLA ru/vladimir "Владимирская область"
+  runmepipe2 RU-VGG ru/volgograd "Волгоградская область"
+  runmepipe2 RU-VLG ru/vologda "Вологодская область"
+  runmepipe2 RU-VOR ru/voronezh "Воронежская область"
+  runmepipe2 RU-YEV ru/evrey "Еврейская автономная область"
+  runmepipe2 RU-ZAB ru/zabaikal "Забайкальский край"
+  runmepipe2 RU-IVA ru/ivanov "Ивановская область"
+  runmepipe2 RU-IRK ru/irkutsk "Иркутская область"
+  runmepipe2 RU-KB  ru/kabardin "Кабардино-Балкарская Республика"
+  runmepipe2 RU-KGD ru/kalinin "Калининградская область"
+  runmepipe2 RU-KLU ru/kaluzh "Калужская область"
+  runmepipe2 RU-KAM ru/kamch "Камчатский край"
+  runmepipe2 RU-KC  ru/karach "Карачаево-Черкесская Республика"
+  runmepipe2 RU-KEM ru/kemerovo "Кемеровская область"
+  runmepipe2 RU-KIR ru/kirov "Кировская область"
+  runmepipe2 RU-KOS ru/kostrom "Костромская область"
+  runmepipe2 RU-KDA ru/krasnodar "Краснодарский край"
+  runmepipe2 RU-KYA ru/krasnoyarsk "Красноярский край"
+  runmepipe2 RU-KGN ru/kurgan "Курганская область"
+  runmepipe2 RU-KRS ru/kursk "Курская область"
+  runmepipe2 RU-LEN ru/leningrad "Ленинградская область"
+  runmepipe2 RU-LIP ru/lipetsk "Липецкая область"
+  runmepipe2 RU-MAG ru/magadan "Магаданская область"
+  runmepipe2 RU-MOS ru/mosobl "Московская область"
+  runmepipe2 RU-MUR ru/murmansk "Мурманская область"
+  runmepipe2 RU-NEN ru/nenec "Ненецкий автономный округ"
+  runmepipe2 RU-NIZ ru/nizhegorod "Нижегородская область"
+  runmepipe2 RU-NGR ru/novgorod "Новгородская область"
+  runmepipe2 RU-NVS ru/novosib "Новосибирская область"
+  runmepipe2 RU-OMS ru/omsk "Омская область"
+  runmepipe2 RU-ORE ru/orenburg "Оренбургская область"
+  runmepipe2 RU-ORL ru/orlovsk "Орловская область"
+  runmepipe2 RU-PNZ ru/penz "Пензенская область"
+  runmepipe2 RU-PER ru/perm "Пермский край"
+  runmepipe2 RU-PRI ru/prim "Приморский край"
+  runmepipe2 RU-PSK ru/pskov "Псковская область"
+  runmepipe2 RU-AD  ru/adygeya "Республика Адыгея"
+  runmepipe2 RU-AL  ru/altay "Республика Алтай"
+  runmepipe2 RU-BA  ru/bashkir "Республика Башкортостан"
+  runmepipe2 RU-BU  ru/buryat "Республика Бурятия"
+  runmepipe2 RU-DA  ru/dagestan "Республика Дагестан"
+  runmepipe2 RU-IN  ru/ingush "Республика Ингушетия"
+  runmepipe2 RU-KL  ru/kalmyk "Республика Калмыкия"
+  runmepipe2 RU-KR  ru/karel "Республика Карелия"
+  runmepipe2 RU-KO  ru/komi "Республика Коми"
+  runmepipe2 RU-CR  ru/crimea "Республика Крым"
+  runmepipe2 RU-ME  ru/mariyel "Республика Марий Эл"
+  runmepipe2 RU-MO  ru/mordov "Республика Мордовия"
+  runmepipe2 RU-SA  ru/yakut "Республика Саха (Якутия)"
+  runmepipe2 RU-SE  ru/osetiya "Республика Северная Осетия - Алания"
+  runmepipe2 RU-TA  ru/tatar "Республика Татарстан"
+  runmepipe2 RU-TY  ru/tyva "Республика Тыва"
+  runmepipe2 RU-KK  ru/khakas "Республика Хакасия"
+  runmepipe2 RU-ROS ru/rostov "Ростовская область"
+  runmepipe2 RU-RYA ru/ryazan "Рязанская область"
+  runmepipe2 RU-SAM ru/samar "Самарская область"
+  runmepipe2 RU-SAR ru/saratov "Саратовская область"
+  runmepipe2 RU-SAK ru/sakhalin "Сахалинская область"
+  runmepipe2 RU-SVE ru/sverdl "Свердловская область"
+  runmepipe2 RU-SMO ru/smol "Смоленская область"
+  runmepipe2 RU-STA ru/stavrop "Ставропольский край"
+  runmepipe2 RU-TAM ru/tambov "Тамбовская область"
+  runmepipe2 RU-TVE ru/tver "Тверская область"
+  runmepipe2 RU-TOM ru/tomsk "Томская область"
+  runmepipe2 RU-TUL ru/tul "Тульская область"
+  runmepipe2 RU-TYU ru/tumen "Тюменская область"
+  runmepipe2 RU-UD  ru/udmurt "Удмуртская Республика"
+  runmepipe2 RU-ULY ru/ulyan "Ульяновская область"
+  runmepipe2 RU-KHA ru/khabar "Хабаровский край"
+  runmepipe2 RU-KHM ru/khanty "Ханты-Мансийский автономный округ"
+  runmepipe2 RU-CHE ru/chel "Челябинская область"
+  runmepipe2 RU-CE  ru/chechen "Чеченская Республика"
+  runmepipe2 RU-CU  ru/chuvash "Чувашская Республика"
+  runmepipe2 RU-CHU ru/chukot "Чукотский автономный округ"
+  runmepipe2 RU-YAN ru/yamal "Ямало-Ненецкий автономный округ"
+  runmepipe2 RU-YAR ru/yarosl "Ярославская область"
+}
+
+runallua() {
+  runmepipe2 UA-05  ua/vinnitsa "Винницкая область"
+  runmepipe2 UA-07  ua/volynsk "Волынская область"
+  runmepipe2 UA-12  ua/dnepropetrovsk "Днепропетровская область"
+  runmepipe2 UA-14  ua/donetsk "Донецкая область"
+  runmepipe2 UA-18  ua/zhitomir "Житомирская область"
+  runmepipe2 UA-21  ua/zakarpatskaya "Закарпатская область"
+  runmepipe2 UA-23  ua/zaporozh "Запорожская область"
+  runmepipe2 UA-26  ua/ivanofrank "Ивано-Франковская область"
+  runmepipe2 UA-32  ua/kiev "Киевская область"
+  runmepipe2 UA-35  ua/kirovograd "Кировоградская область"
+  runmepipe2 UA-09  ua/lugansk "Луганская область"
+  runmepipe2 UA-46  ua/lvov "Львовская область"
+  runmepipe2 UA-48  ua/nikolaev "Николаевская область"
+  runmepipe2 UA-51  ua/odessa "Одесская область"
+  runmepipe2 UA-53  ua/poltava "Полтавская область"
+  #runmepipe2 UA-43  ua/crimea "Республика Крым"
+  runmepipe2 UA-56  ua/rovno "Ровенская область"
+  runmepipe2 UA-59  ua/sumy "Сумская область"
+  runmepipe2 UA-61  ua/ternopol "Тернопольская область"
+  runmepipe2 UA-63  ua/kharkov "Харьковская область"
+  runmepipe2 UA-65  ua/kherson "Херсонская область"
+  runmepipe2 UA-68  ua/khmelnitsky "Хмельницкая область"
+  runmepipe2 UA-71  ua/cherkassy "Черкасская область"
+  runmepipe2 UA-74  ua/chernigov "Черниговская область"
+  runmepipe2 UA-77  ua/chernovtsy "Черновицкая область"
+}
+
+runallext() {
+
+  wget http://download.openstreetmap.fr/extracts/central-america/nicaragua.osm.pbf -o /dev/null -O -|osmconvert --out-osm -|runmepipe ni "Nicaragua" en users,users-csv,warnings,borders,routing,tags
+  runmepipe2 IE ie "Ireland and Northern Ireland" en users,users-csv,warnings,borders,routing,tags
+  runmepipe2 AR ar "Argentina" en users,users-csv,warnings,borders,routing,tags
+  runmepipe2 HT_DO ht "Haiti and Dominican Republic" en users,users-csv,warnings,borders,routing,tags
+  runmepipe2 ZA_LS za "South Africa and Lesotho" en users,users-csv,warnings,borders,routing,tags
+  runmepipe2 PH ph "Philippines" en users,warnings,borders,routing,tags
+  runmepipe2 PT pt "Portugal" en users,users-csv,warnings,borders,routing,tags
+  runmepipe2 RO ro "Romania" en users,users-csv,warnings,borders,routing,tags
+  runmepipe2 LU lu "Luxembourg" en
+  runmepipe2 BO bo "Bolivia" en users,warnings,borders,routing,tags
+  runmepipe2 CL cl "Chile" en users,users-csv,warnings,borders,routing,tags
+
+}
+
+runallother
+runmepipe2 BY by "Беларусь" ru users,users-csv,warnings,borders,routing,tags
+runmepipe2 UA ua "Украина" ru users,users-csv,tags
+runallext
+runallru
+runallby
+runallua
+runmepipe2 RU ru "Россия" ru users,users-csv,tags
+
