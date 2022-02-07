@@ -44,8 +44,16 @@ import datetime
 import time
 import tagChecker
 from osm_micro_tools import *
-
-from iso8601 import parse
+## iso8601 has bug with some date strings, like '2011-03-27T02:50:14Z' (causes OverflowError)
+try:
+  from dateutil.parser import isoparse
+  from dateutil.tz import tzutc, tzlocal
+  parse = lambda t: time.mktime(isoparse(t).replace(tzinfo=tzutc()).astimezone(tz=tzlocal()).timetuple())
+except ImportError:
+  try:
+    from xml.utils.iso8601 import parse
+  except ImportError:
+    from iso8601 import parse
 
 try:
         import psyco
